@@ -1,27 +1,25 @@
 # nightlight-demo
 Nightlight demo using CounterFit
 
-## Install CounterFit library:
-
+## Create a Python virtual environment
 ```
-pip3 install CounterFit 
-```
-## Install shims:
-
-```
-pip3 install counterfit-shims-grove
+python3 -m venv .venv
 ```
 
-## Quickstart:
+## Install CounterFit pip packages:
 ```
-In project root directory:
-
-python3 app.py
-
+pip install CounterFit
+pip install counterfit-connection
+pip install counterfit-shims-grove
 ```
 
-## In another terminal inside project root directory run CounterFit:
+## Run CounterFit:
 ```
 CounterFit
-
 ```
+
+## Run program:
+```
+python app.py
+```
+
