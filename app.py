@@ -1,0 +1,23 @@
+
+from counterfit_connection import CounterFitConnection
+CounterFitConnection.init('127.0.0.1', 5000)
+
+import time
+#shims library is used to talk to the virtual sensor
+#whereas grove is used to talk to the physical hardware (e.g. raspberry pi)
+from counterfit_shims_grove.grove_light_sensor_v1_2 import GroveLightSensor
+from counterfit_shims_grove.grove_led import GroveLed
+
+light_sensor = GroveLightSensor(0)
+led = GroveLed(5)
+
+while True:
+    light = light_sensor.light
+    print('Light level: ', light)
+
+    if light < 300:
+        led.on()
+    else:
+        led.off()
+
+    time.sleep(1)
